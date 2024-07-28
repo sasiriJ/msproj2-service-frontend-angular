@@ -1,6 +1,8 @@
 import {Component, inject, OnInit} from '@angular/core';
 import {OidcSecurityService} from "angular-auth-oidc-client";
 import {Router} from "@angular/router";
+import {OrderService} from "../services/order.service";
+
 
 type Product = {
   id: number|string,
@@ -8,6 +10,7 @@ type Product = {
   name: string,
   price: number
 }
+
 
 @Component({
   selector: 'app-home-page',
