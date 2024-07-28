@@ -2,13 +2,16 @@ import {Component, inject, OnInit} from '@angular/core';
 import {OidcSecurityService} from "angular-auth-oidc-client";
 import {Router} from "@angular/router";
 import {OrderService} from "../services/order.service";
+import {ProductService} from "../services/product.service";
+import {Order} from "../../model/order";
 
 
-type Product = {
-  id: number|string,
-  skuCode: string,
-  name: string,
-  price: number
+export type Product = {
+  id?: string;
+  skuCode: string;
+  name: string;
+  description: string;
+  price: number;
 }
 
 
